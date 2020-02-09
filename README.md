@@ -138,12 +138,6 @@ Start-UDDashboard -Port 10000 -AutoReload -Dashboard (
 
             }
             New-UDColumn -Size 12 -Content {
-                $today = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).Day)"
-                $todayend = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).AddDays(5).Day)"
-                $todayend2 = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).AddDays(6).Day)"
-                $todayend3 = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).AddDays(7).Day)"
-                $todayend4 = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).AddDays(8).Day)"
-                $todayend5 = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).AddDays(9).Day)"
                 New-UDHeading -Size 3 -Text "Computed Start End From Duration Gantt"
                 New-UDGantt -Id "Simple" -Width "85%" -Height "270px" -Data {
                     New-UDGanttData -TaskID "Research" -TaskName "Find Component" -Resource "Brain" -Duration (70 * 60 * 1000) -PercentComplete 100
