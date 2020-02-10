@@ -25,8 +25,10 @@ function New-UDGanttData {
             TaskID          = $TaskID
             TaskName        = $TaskName
             Resource        = $Resource
-            Start           = $Start
-            End             = $End
+
+            Start   = "Date($($Start.Year), $($Start.Month - 1), $($Start.Day), $($Start.Hour), $($Start.Minute), $($Start.Second), $($Start.Millisecond))"
+            End   = "Date($($End.Year), $($End.Month - 1), $($End.Day), $($End.Hour), $($End.Minute), $($End.Second), $($End.Millisecond))"
+            
             Duration        = $Duration
             PercentComplete = $PercentComplete
             Dependencies    = $Dependencies
