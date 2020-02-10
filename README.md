@@ -2,8 +2,8 @@
 Google gantt chart to universaldashboard to better plan tasks and projects, as well as map timelines and critical paths.
 
 ```
-Import-Module universaldashboard.Community -RequiredVersion 2.8.1
-Import-Module "C:\UD\GoogleCharts\UD-Gantt-master\UniversalDashboard.UDGantt\UniversalDashboard.UDGantt.psd1" -Force
+Import-Module -Nameuniversaldashboard
+Import-Module -Name UniversalDashboard
 
 Get-UDDashboard | Stop-UDDashboard
 
