@@ -24,6 +24,7 @@ Start-UDDashboard -Port 10000 -AutoReload -Dashboard (
                     New-UDGanttData -TaskID "Complete" -TaskName "Submit Component" -Start (Get-Date).AddDays(8) -End (Get-Date).AddDays(9) -PercentComplete 0 -Dependencies "Test,Build"
                 }
             }
+            <#
             New-UDColumn -Size 12 -Content {
                 $today = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).Day)"
                 $todayend = "$((Get-Date).Year),$((Get-Date).Month -1),$((Get-Date).AddDays(5).Day)"
@@ -138,6 +139,7 @@ Start-UDDashboard -Port 10000 -AutoReload -Dashboard (
                     New-UDGanttData -TaskID "Complete" -TaskName "Submit Component" -Resource "publish" -Duration (5 * 60 * 1000) -PercentComplete 0 -Dependencies "Test"
                 }
             }
+            #>
         }
     }
 )
