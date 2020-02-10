@@ -8,10 +8,10 @@ function New-UDGanttData {
         [string]$Resource,
         [Parameter()]
         [AllowNull()]
-        [object]$Start,
+        [DateTime]$Start,
         [Parameter()]
         [AllowNull()]
-        [object]$End,
+        [DateTime]$End,
         [Parameter()]
         [int]$Duration,
         [Parameter(Mandatory = $true)]
@@ -21,17 +21,22 @@ function New-UDGanttData {
         [string[]]$Dependencies
     )
     End {
-        [PSCustomObject]@{
+        $Data = [PSCustomObject]@{
             TaskID          = $TaskID
             TaskName        = $TaskName
             Resource        = $Resource
 
-            Start   = "Date($($Start.Year), $($Start.Month - 1), $($Start.Day), $($Start.Hour), $($Start.Minute), $($Start.Second), $($Start.Millisecond))"
-            End   = "Date($($End.Year), $($End.Month - 1), $($End.Day), $($End.Hour), $($End.Minute), $($End.Second), $($End.Millisecond))"
-            
+            Start = $null
+            End = $null
+
             Duration        = $Duration
             PercentComplete = $PercentComplete
             Dependencies    = $Dependencies
         }
+
+        if ($PSBoundParameters.ContainsKey('Start')) { $Data.Start = "Date($($Start.Year), $($Start.Month - 1), $($Start.Day), $($Start.Hour), $($Start.Minute), $($Start.Second), $($Start.Millisecond))" }
+        if ($PSBoundParameters.ContainsKey('End')) { $Data.End = "Date($($End.Year), $($End.Month - 1), $($End.Day), $($End.Hour), $($End.Minute), $($End.Second), $($End.Millisecond))"}
+        
+        $Data
     }
 }
