@@ -1,17 +1,17 @@
 # UD-Gantt
 Google gantt chart to universaldashboard to better plan tasks and projects, as well as map timelines and critical paths.
 
-## Parameters 
+## Parameters for New-UDGantt
   Please note that there are two functions in this component the following parameter set is for **New-UDGantt**
-  - Width  Allows you to set the width of the gantt chart, this is a string so an input of "80%" or "500px" is valid
-  - Height Allows you to set the height of the gantt chart, this is a string so an input of "300px" is valid
-  - CriticalPathEnabled will decide if the critical path is enabled this is a boolean value so either $true or $false is valid
-  - CriticalStrokeColor decides the colour of the critical stroke, this is a string so '#e64a19' input is valid 
-  - GridStrokeWidth sets the stroke width on the grid that the gantt chart is displayed in. This is an integer value such as 2 
-  - CriticalStrokeWidth sets the stroke width of the critical path arrows this is an integer so 5 is a valid input 
-  - GridStrokeColor sets the boarder stroke colour of the grid this is a string so "#000" is a valid input  
-  - InnerGrid '#fff3e0' 
-  - InnerGridDark '#ffcc80'
+  - **-Width**  Allows you to set the width of the gantt chart, this is a string so an input of "80%" or "500px" is valid
+  - **-Height** Allows you to set the height of the gantt chart, this is a string so an input of "300px" is valid
+  - **-CriticalPathEnabled** will decide if the critical path is enabled this is a boolean value so either $true or $false is valid
+  - **-CriticalStrokeColor** decides the colour of the critical stroke, this is a string so '#e64a19' input is valid 
+  - **-GridStrokeWidth** sets the stroke width on the grid that the gantt chart is displayed in. This is an integer value such as 2 
+  - **-CriticalStrokeWidth** sets the stroke width of the critical path arrows this is an integer so 5 is a valid input 
+  - **-GridStrokeColor** sets the boarder stroke colour of the grid this is a string so "#000" is a valid input  
+  - **-InnerGrid** sets the innergrid colour of the grid this is a string so '#fff3e0' is valid 
+  - **-InnerGridDark** sets the innergrid darker colour of the grid this is a string so'#ffcc80' is valid
   
 
 ## Demo
